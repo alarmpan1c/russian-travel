@@ -5,6 +5,10 @@
   line-height: calc(22 / 18);
 }
 
+.place__link:hover {
+  opacity: .8;
+}
+
 @media screen and (max-width: 767px) {
   .place__link {
     margin-left: 16px;
