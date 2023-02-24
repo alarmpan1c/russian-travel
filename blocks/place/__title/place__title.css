@@ -1,22 +1,19 @@
 .place__title {
-  max-width: 460px;
+  display: flex;
   margin: 0;
+  padding: 0;
   font-weight: 900;
   font-size: 72px;
   line-height: 76px;
-}
-
-@media screen and (max-width: 1279px) {
-  .place__title {
-    max-width: 440px;
-  }
+  text-align: left;
 }
 
 @media screen and (max-width: 1023px) {
   .place__title {
-    max-width: 340px;
-    font-size: 42px;
-    line-height: 46px;
+    font-size: calc(42px + (72 - 42) * ((100vw - 768px) / (1024 - 768)));
+    line-height: calc(46px + (76 - 46)  * ((100vw - 768px) / (1024 - 768)));
+    padding-right: 14.5px;
+        
   }
 }
 
@@ -24,7 +21,7 @@
   .place__title {
     max-width: 288px;
     font-size: 32px;
-    line-height: 35px;
+    line-height: calc(35px + (46 - 35)  * ((100vw - 320px) / (768 - 320)));
     margin: 0 16px 0 16px;
   }
 }

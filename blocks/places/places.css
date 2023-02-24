@@ -1,21 +1,23 @@
 .places {
   max-width: 984px;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 1fr;
 }
 
 @media screen and (max-width: 1279px) {
   .places{
-    max-width: 928px;
-    margin-left: 48px;
-    margin-right: 48px;
+    max-width: calc(928px + (984 - 928) * ((100vw - 1024px) / (1280 - 1024)));
   }
 }
 
 @media screen and (max-width: 1023px) {
   .places{
-    max-width: 720px;
-    margin-left: 24px;
-    margin-right: 24px;
+    max-width: calc(720px + (928 - 720) * ((100vw - 768px) / (1024 - 768)));
+    gap: 73px;
   }
 }
 
@@ -23,5 +25,6 @@
   .places {   
     max-width: 100%;
     margin: 0;
+    gap: 50px;
   }
 }
